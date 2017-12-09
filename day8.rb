@@ -40,7 +40,7 @@ def case_check(key, operator, value)
 end
 
 
-open('input.txt').each_line do |line|
+open('input_d8.txt').each_line do |line|
     x = line.chomp.split(' ')
     if case_check(x[4], x[5], x[6].to_i)
         set_hash_value(x[0], x[1], x[2].to_i)

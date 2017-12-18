@@ -1,12 +1,6 @@
+@dir_x, @dir_y, @dir_z, @max_d = 0,0,0,0
 
-@dir_x = 0
-@dir_y = 0
-@dir_z = 0
-@max_d = 0
-
-x = open('input_d11.txt').read.split(',')
-
-x.each do |dir|
+open('input_d11.txt').read.split(',').each do |dir|
     case dir
     when 'n'
         @dir_y += 1
@@ -33,5 +27,4 @@ x.each do |dir|
     end
 
 end
-puts [@dir_x.abs, @dir_y.abs, @dir_z.abs].max
-puts @max_d
+puts [@dir_x.abs, @dir_y.abs, @dir_z.abs].max.to_s + " = Current Distance; " + @max_d.to_s + " = Max distance"
